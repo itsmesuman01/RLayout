@@ -1,24 +1,34 @@
 import React from "react";
 
 const Topbar = () => {
-  const diva = {
-    height: "15vh",
+  const parentdiv = {
+    height: "10vh",
     backgroundColor: "#2e9ae5",
-    position: "relative",
+    display: "flex",
+    gap: "5rem",
+    justifyContent: "end",
+    alignItems: "center",
     borderBottom: "5px solid white",
+    paddingRight: "1rem",
   };
-  const divb = {
-    height: "auto",
-    width: "auto",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+
+  const childdiv = {
+    cursor: "pointer",
+    color: "white",
+    fontSize: "20px",
   };
 
   return (
-    <div style={diva}>
-      <div style={divb}></div>
+    <div style={parentdiv}>
+      <div style={childdiv} className="diva">
+        Home
+      </div>
+      <div style={childdiv} className="divb">
+        About Us
+      </div>
+      <div style={childdiv} className="divc">
+        Contact Us
+      </div>
     </div>
   );
 };
