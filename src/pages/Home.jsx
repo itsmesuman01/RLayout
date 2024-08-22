@@ -3,6 +3,7 @@ import Topbar from "../components/Topbar";
 import Carasoul from "../components/Carasoul";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const passRef = useRef(0)
@@ -39,6 +40,7 @@ const Home = () => {
         }}>Contact Now</button>
       </div>
       <Contact passRef={passRef} />
+      <Footer />
     </div>
   );
 };

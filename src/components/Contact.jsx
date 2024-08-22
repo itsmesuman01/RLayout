@@ -6,6 +6,7 @@ const Contact = ({ passRef }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            marginBottom: "1rem"
         },
         form: {
             display: "flex",

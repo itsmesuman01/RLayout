@@ -11,7 +11,7 @@ const About = () => {
       marginTop: "30px",
       borderTop: "1px solid white",
       display: "flex",
-      padding: "5px",
+      padding: "5px 0px 5px 0px",
     },
     left: {
       flex: 1,
