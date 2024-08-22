@@ -32,6 +32,7 @@ const About = () => {
       justifyContent: "center",
       marginLeft: "15px",
       flexDirection: "column",
+      textAlign: "start"
     },
     hr: {
       border: "0",

@@ -21,7 +21,6 @@ const Carasoul = () => {
 
   const imageDivStyle = {
     height: "60vh",
-    backgroundColor: "blue",
     position: "relative",
     backgroundImage: `url(${imageArray[currentIndex]})`,
     backgroundSize: "cover",
