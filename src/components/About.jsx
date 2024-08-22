@@ -1,9 +1,13 @@
 import React from "react";
 import { images } from "../assets/assets";
 import { useTranslation } from 'react-i18next';
+import Topbar from "../components/Topbar";
+import { useLocation } from 'react-router-dom';
 
 const About = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const data = location.state?.data;
   const css = {
     global: {
       textAlign: "center",
@@ -48,6 +52,7 @@ const About = () => {
 
   return (
     <div style={css.global}>
+      {data === 1 && <Topbar />}
       <h1>{t('ABOUT')}</h1>
       <hr style={css.hr} />
       <div style={css.main}>

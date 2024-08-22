@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { NavLink } from "react-router-dom";
 
 const Topbar = () => {
   const [hovered, setHovered] = useState(null);
@@ -30,6 +31,10 @@ const Topbar = () => {
       display: "flex",
       gap: "5rem",
     },
+    link: {
+      textDecoration: "none",
+      color: "inherit",
+    }
   };
 
   const childdiv = (isHovered) => ({
@@ -48,8 +53,8 @@ const Topbar = () => {
     <div style={css.parentdiv}>
       <div>
         {i18n.language === 'en' ?
-          (<button style={css.button} onClick={() => handleLanguageChange('np')}>Translate Nepali</button>) :
-          (<button style={css.button} onClick={() => handleLanguageChange('en')}>Translate English</button>)}
+          (<button style={css.button} onClick={() => handleLanguageChange('np')}>नेपाली</button>) :
+          (<button style={css.button} onClick={() => handleLanguageChange('en')}>ENG</button>)}
       </div>
       <div style={css.navContainer}>
         <div
@@ -57,21 +62,21 @@ const Topbar = () => {
           onMouseEnter={() => setHovered("home")}
           onMouseLeave={() => setHovered(null)}
         >
-          {t('home')}
+          <NavLink style={css.link} to="/">{t('home')}</NavLink>
         </div>
         <div
           style={childdiv(hovered === "about")}
           onMouseEnter={() => setHovered("about")}
           onMouseLeave={() => setHovered(null)}
         >
-          {t('about')}
+          <NavLink style={css.link} to="/about" state={{ data: 1 }}>{t('about')}</NavLink>
         </div>
         <div
           style={childdiv(hovered === "contact")}
           onMouseEnter={() => setHovered("contact")}
           onMouseLeave={() => setHovered(null)}
         >
-          {t('contact')}
+          <NavLink style={css.link} to="/contact" state={{ data: 1 }}>{t('contact')}</NavLink>
         </div>
       </div>
     </div>
