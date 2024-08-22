@@ -1,7 +1,9 @@
 import React from "react";
 import { images } from "../assets/assets";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const css = {
     global: {
       textAlign: "center",
@@ -46,17 +48,15 @@ const About = () => {
 
   return (
     <div style={css.global}>
-      <h1>ABOUT</h1>
+      <h1>{t('ABOUT')}</h1>
       <hr style={css.hr} />
       <div style={css.main}>
         <div style={css.left}></div>
         <div style={css.right}>
-          <h1>Who are we ?</h1>
+          <h1>{t('Waw')}</h1>
           <hr style={css.hr} />
           <p>
-            If you want to build custom websits, software and mobile apps. Our
-            IT team is here to deal with it. The more fast payoff the more fast
-            service
+            {t('desc')}
           </p>
         </div>
       </div>

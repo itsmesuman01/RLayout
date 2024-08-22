@@ -4,8 +4,10 @@ import Carasoul from "../components/Carasoul";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
   const passRef = useRef(0)
   const homecss = {
     callus: {
@@ -34,10 +36,10 @@ const Home = () => {
       <About />
       <div style={homecss.callus}>
         <h1>1234567890</h1>
-        <p>If you want best service call us now.</p>
+        <p>{t('SERVICE')}</p>
         <button style={homecss.button} onClick={() => {
           passRef.current.focus();
-        }}>Contact Now</button>
+        }}>{t('contactnow')}</button>
       </div>
       <Contact passRef={passRef} />
       <Footer />

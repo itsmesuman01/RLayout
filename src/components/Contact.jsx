@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = ({ passRef }) => {
+    const { t } = useTranslation();
     const css = {
         main: {
             display: "flex",
@@ -49,7 +51,7 @@ const Contact = ({ passRef }) => {
 
     return (
         <div style={css.main}>
-            <h1>CONTACT US</h1>
+            <h1>{t('CONTACT')}</h1>
             <hr style={css.hr} />
             <div style={css.form}>
                 <label htmlFor="name" style={css.label}>Name</label>
