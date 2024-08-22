@@ -8,7 +8,7 @@ const About = () => {
     },
     main: {
       height: "50vh",
-      marginTop: "5px",
+      marginTop: "30px",
       borderTop: "1px solid white",
       display: "flex",
       padding: "5px",

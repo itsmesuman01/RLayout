@@ -43,7 +43,7 @@ const Topbar = () => {
         onMouseEnter={() => setHovered("contact")}
         onMouseLeave={() => setHovered(null)}
       >
-        {/* Contact Us */}
+        Contact Us
       </div>
     </div>
   );
